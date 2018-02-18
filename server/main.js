@@ -1,5 +1,14 @@
 import { Meteor } from 'meteor/meteor';
+import { Mongo } from 'meteor/mongo';
+
+import getTenders from './services/getTenders.js';
+import insertTender from './services/insertTender.js';
 
 Meteor.startup(() => {
-  // code to run on server at startup
+	const tenders = getTenders();
+
+	tenders.forEach(tender => {
+		insertTender(tender);
+	})
+	console.log('Server done');
 });
