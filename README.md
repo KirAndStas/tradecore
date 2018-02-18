@@ -1,1 +1,3 @@
-For start up run meteor
+For start up:
+1. Run npm install
+2. Run meteor
