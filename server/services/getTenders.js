@@ -8,10 +8,10 @@ export default function getTenders() {
 		const tender = HTTP.get(
 			`https://public.api.openprocurement.org/api/0/tenders/${tenderId.id}`);
 
-		const { id, title, procuringEntity, value } = tender.data.data;
+		const { tenderID, title, procuringEntity, value } = tender.data.data;
 
 		return {
-			id,
+			tenderID,
 			title,
 			price: value.amount,
 			currency: value.currency,

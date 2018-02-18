@@ -3,10 +3,10 @@ import { Mongo } from 'meteor/mongo';
 import Tenders  from '../../imports/models/tenders.js';
 
 export default function insertTender(tender) {
-	const { id, title, location, currency, price } = tender;
+	const { tenderID, title, location, currency, price } = tender;
 
 	Tenders.insert({
-		id,
+		tenderID,
 		title,
 		location,
 		price,

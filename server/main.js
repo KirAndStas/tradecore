@@ -4,6 +4,8 @@ import { Mongo } from 'meteor/mongo';
 import getTenders from './services/getTenders.js';
 import insertTender from './services/insertTender.js';
 
+StaticServer.add('/public', '/home/cyr/Dev/tradecore/public');
+
 Meteor.startup(() => {
 	const tenders = getTenders();
 

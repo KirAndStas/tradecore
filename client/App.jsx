@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-
-import './App.less';
-
-export default class App extends Component {
-	render() {
-		return (
-			<div className='Hello'>Hello !!!</div>
-		)
-	}
-}
+import { withTracker } from 'meteor/react-meteor-data';
+ 
+import Tenders from '../imports/models/tenders.js';
+ 
+import TendersComponent from './components/Tenders.jsx';
+ 
+export default withTracker(() => {
+  return {
+    tenders: Tenders.find({}).fetch()
+  };
+})(TendersComponent);
