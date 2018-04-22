@@ -12,7 +12,7 @@ export default class Tender extends Component {
 		const { tenderID, title, location, currency, price } = this.props.tender;
 		const link = `https://prozorro.gov.ua/tender/${tenderID}`;
 
-		console.log(tenderID)
+		// console.log(tenderID)
 
 		return (
 			<div className='Tender'>
@@ -28,7 +28,7 @@ export default class Tender extends Component {
 					<div className='currency'>{currency}</div>
 				</div>
 			</div>
-				
+
 		);
 	}
 }

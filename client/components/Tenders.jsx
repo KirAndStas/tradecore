@@ -6,11 +6,14 @@ import './Tenders.less';
 
 export default class App extends Component {
 	static propTypes = {
-		tenders: PropTypes.array.isRequired
+    tenders: PropTypes.array.isRequired,
+		plans: PropTypes.array.isRequired
 	}
 
   	render() {
-  		const { tenders } = this.props;
+  		const { tenders, plans } = this.props;
+
+      console.log('tenders + plans', tenders, plans);
 
 		return (
 			<div className='TendersWrapper'>

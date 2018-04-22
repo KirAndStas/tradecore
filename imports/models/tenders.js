@@ -1,6 +1,8 @@
 import { Mongo } from 'meteor/mongo';
 
-const Tenders = new Mongo.Collection('tenders');
+export const TendersPublication = { name: 'tenders' };
+
+const Tenders = new Mongo.Collection(TendersPublication.name);
 
 Tenders.shema = new SimpleSchema({
 	id       : {type: String},
